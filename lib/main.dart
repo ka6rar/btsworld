@@ -1,3 +1,4 @@
+import 'package:btsworld/audio/audios.dart';
 import 'package:btsworld/image/images.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -19,20 +20,20 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return    Scaffold(
       appBar: AppBar(
-        title: const Text('الرئيسية'),
+        title:  Text('الرئيسية' ,  style: GoogleFonts.cairo()),
         centerTitle: true,
-        backgroundColor:Colors.pink  ,
+        backgroundColor:Colors.pinkAccent  ,
         elevation: 0,
       ),
       body: Stack(
-        
         children: [
            Container(
             height: 100,
              decoration:  const BoxDecoration(
                borderRadius: BorderRadius.only(bottomLeft: Radius.circular(15) , bottomRight: Radius.circular(15)),
-               color:  Colors.pink
+               color:  Colors.pinkAccent
              ),
+
           ) ,
           Padding(
             padding: const EdgeInsets.only(top: 90),
@@ -44,19 +45,25 @@ class _HomeState extends State<Home> {
               crossAxisCount: 2,
               children:[
 
-                Container(
-                  padding: const EdgeInsets.all(8),
-                  child:  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: const [
-                      Icon(Icons.music_note_outlined , size: 50, color: Colors.amberAccent,) ,
-                      Text('اغاني' , style: TextStyle(fontSize: 20 ,color: Colors.amber) )
-                    ],
-                  ) , 
-                  decoration: BoxDecoration(
-                      color: Colors.amber[100],
-                      borderRadius: BorderRadius.circular(20)
+                GestureDetector(
+                  onTap: ()
+                  {
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context) =>  MyApp(),));
+                  },
+                  child: Container(
+                    padding: const EdgeInsets.all(8),
+                    child:  Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children:  [
+                        const Icon(Icons.music_note_outlined , size: 50, color: Colors.amberAccent,) ,
+                        Text('اغاني' , style: GoogleFonts.cairo(fontSize: 20 ,color: Colors.amber) )
+                      ],
+                    ) ,
+                    decoration: BoxDecoration(
+                        color: Colors.amber[100],
+                        borderRadius: BorderRadius.circular(20)
+                    ),
                   ),
                 ),
                 GestureDetector(
@@ -71,7 +78,7 @@ class _HomeState extends State<Home> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children:  [
                         const Icon(Icons.image_outlined , size: 50, color: Colors.green,) ,
-                        Text('صور' , style: GoogleFonts.lato(fontStyle: FontStyle.italic))
+                        Text('صور' , style: GoogleFonts.cairo(fontSize: 20 ,color: Colors.green))
                       ],
                     ) ,
                     decoration: BoxDecoration(
@@ -85,9 +92,9 @@ class _HomeState extends State<Home> {
                   child:  Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
-                    children: const [
-                      Icon(Icons.new_releases , size: 50, color: Colors.blueGrey,) ,
-                      Text('اخبار' , style: TextStyle(fontSize: 20 ,color: Colors.blueGrey) )
+                    children:  [
+                      const Icon(Icons.new_releases , size: 50, color: Colors.blueGrey,) ,
+                      Text('اخبار' , style: GoogleFonts.cairo(fontSize: 20 ,color: Colors.blueGrey) )
                     ],
                   ) ,
                   decoration: BoxDecoration(
@@ -100,9 +107,9 @@ class _HomeState extends State<Home> {
                   child:  Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
-                    children: const [
-                      Icon(Icons.slow_motion_video_rounded , size: 50, color: Colors.redAccent,) ,
-                      Text('فديوات' , style: TextStyle(fontSize: 20 ,color: Colors.redAccent) )
+                    children:  [
+                      const  Icon(Icons.slow_motion_video_rounded , size: 50, color: Colors.redAccent,) ,
+                      Text('فديوات' , style: GoogleFonts.cairo(fontSize: 20 ,color: Colors.redAccent) )
                     ],
                   ) ,
                   decoration: BoxDecoration(
