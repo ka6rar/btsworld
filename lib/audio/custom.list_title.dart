@@ -1,6 +1,3 @@
-import 'dart:html';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 Widget customListTole({String? title, String? singer, String? covers, onTap}) {
@@ -16,24 +13,31 @@ Widget customListTole({String? title, String? singer, String? covers, onTap}) {
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(12),
                 image: DecorationImage(
-                  image: NetworkImage(covers.toString()),
+                  image: NetworkImage( covers.toString() ),
                   fit: BoxFit.cover,
                 )),
           ),
           const SizedBox(width: 10),
           Column(
+            crossAxisAlignment:CrossAxisAlignment.start ,
             children: [
               Text(
                 title.toString(),
                 style: const TextStyle(
                   fontSize: 18.0,
-                  fontWeight: FontWeight.w700,
+                  fontWeight: FontWeight.w300,
+                    color: Colors.white  ,
+                    fontFamily: "Gafata"
+
+
                 ),
               ),
               const SizedBox(width: 5),
               Text(
                 singer.toString(),
-                style: const TextStyle(color: Colors.grey, fontSize: 16.0),
+                style: const TextStyle(color: Colors.grey, fontSize: 16.0 ,
+                    fontWeight: FontWeight.w300,
+                    fontFamily: "Gafata"),
               )
             ],
           )
