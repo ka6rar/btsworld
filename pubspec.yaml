@@ -67,6 +67,7 @@ flutter:
   assets:
     - assets\audio\emenem.mp3
     - assets\audio\printermanual.m4a
+    - assets\image\agust.jpg
 
 
 

@@ -1,4 +1,5 @@
 import 'package:btsworld/audio/audios.dart';
+import 'package:btsworld/curriculumvitae/curriculumvitae.dart';
 import 'package:btsworld/image/images.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -17,10 +18,11 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xff0e1c36),
       appBar: AppBar(
         title: Text('الرئيسية', style: GoogleFonts.cairo()),
         centerTitle: true,
-        backgroundColor: Colors.pinkAccent,
+        backgroundColor: const Color(0xff0e1c36),
         elevation: 0,
       ),
       body: Stack(
@@ -28,10 +30,18 @@ class _HomeState extends State<Home> {
           Container(
             height: 100,
             decoration: const BoxDecoration(
-                borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(15),
-                    bottomRight: Radius.circular(15)),
-                color: Colors.pinkAccent),
+              borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(15),
+                  bottomRight: Radius.circular(15)),
+              color: Color(0xff0e1c36),
+            ),
+            child: const Text(
+              'swdoidihei9ohdioehoidfeohifdhioeihodeoidoih',
+              style: TextStyle(color: Colors.white),
+            ),
+          ),
+          SizedBox(
+            height: 20,
           ),
           Padding(
             padding: const EdgeInsets.only(top: 90),
@@ -96,25 +106,34 @@ class _HomeState extends State<Home> {
                         borderRadius: BorderRadius.circular(20)),
                   ),
                 ),
-                Container(
-                  padding: const EdgeInsets.all(8),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      const Icon(
-                        Icons.new_releases,
-                        size: 50,
-                        color: Colors.blueGrey,
-                      ),
-                      Text('اخبار',
-                          style: GoogleFonts.cairo(
-                              fontSize: 20, color: Colors.blueGrey))
-                    ],
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const CurriculumVitae(),
+                        ));
+                  },
+                  child: Container(
+                    padding: const EdgeInsets.all(8),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        const Icon(
+                          Icons.person,
+                          size: 50,
+                          color: Colors.blueGrey,
+                        ),
+                        Text('السيرة الذاتية',
+                            style: GoogleFonts.cairo(
+                                fontSize: 20, color: Colors.blueGrey))
+                      ],
+                    ),
+                    decoration: BoxDecoration(
+                        color: Colors.blueGrey[100],
+                        borderRadius: BorderRadius.circular(20)),
                   ),
-                  decoration: BoxDecoration(
-                      color: Colors.blueGrey[100],
-                      borderRadius: BorderRadius.circular(20)),
                 ),
                 Container(
                   padding: const EdgeInsets.all(8),
