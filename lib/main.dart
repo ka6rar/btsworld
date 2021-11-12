@@ -69,7 +69,7 @@ class _HomeState extends State<Home> {
                           size: 50,
                           color: Colors.amberAccent,
                         ),
-                        Text('اغاني',
+                        Text( 'اغاني اونلاين',
                             style: GoogleFonts.cairo(
                                 fontSize: 20, color: Colors.amber))
                       ],
@@ -79,33 +79,33 @@ class _HomeState extends State<Home> {
                         borderRadius: BorderRadius.circular(20)),
                   ),
                 ),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => const Images(),
-                    ));
-                  },
-                  child: Container(
-                    padding: const EdgeInsets.all(8),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        const Icon(
-                          Icons.image_outlined,
-                          size: 50,
-                          color: Colors.green,
-                        ),
-                        Text('صور',
-                            style: GoogleFonts.cairo(
-                                fontSize: 20, color: Colors.green))
-                      ],
-                    ),
-                    decoration: BoxDecoration(
-                        color: Colors.teal[100],
-                        borderRadius: BorderRadius.circular(20)),
-                  ),
-                ),
+                // GestureDetector(
+                //   onTap: () {
+                //     Navigator.of(context).push(MaterialPageRoute(
+                //       builder: (context) => const Images(),
+                //     ));
+                //   },
+                //   child: Container(
+                //     padding: const EdgeInsets.all(8),
+                //     child: Column(
+                //       mainAxisAlignment: MainAxisAlignment.center,
+                //       crossAxisAlignment: CrossAxisAlignment.center,
+                //       children: [
+                //         const Icon(
+                //           Icons.image_outlined,
+                //           size: 50,
+                //           color: Colors.green,
+                //         ),
+                //         Text('صور',
+                //             style: GoogleFonts.cairo(
+                //                 fontSize: 20, color: Colors.green))
+                //       ],
+                //     ),
+                //     decoration: BoxDecoration(
+                //         color: Colors.teal[100],
+                //         borderRadius: BorderRadius.circular(20)),
+                //   ),
+                // ),
                 GestureDetector(
                   onTap: () {
                     Navigator.push(
@@ -135,26 +135,26 @@ class _HomeState extends State<Home> {
                         borderRadius: BorderRadius.circular(20)),
                   ),
                 ),
-                Container(
-                  padding: const EdgeInsets.all(8),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      const Icon(
-                        Icons.slow_motion_video_rounded,
-                        size: 50,
-                        color: Colors.redAccent,
-                      ),
-                      Text('فديوات',
-                          style: GoogleFonts.cairo(
-                              fontSize: 20, color: Colors.redAccent))
-                    ],
-                  ),
-                  decoration: BoxDecoration(
-                      color: Colors.red[100],
-                      borderRadius: BorderRadius.circular(20)),
-                )
+                // Container(
+                //   padding: const EdgeInsets.all(8),
+                //   child: Column(
+                //     mainAxisAlignment: MainAxisAlignment.center,
+                //     crossAxisAlignment: CrossAxisAlignment.center,
+                //     children: [
+                //       const Icon(
+                //         Icons.slow_motion_video_rounded,
+                //         size: 50,
+                //         color: Colors.redAccent,
+                //       ),
+                //       Text('فديوات',
+                //           style: GoogleFonts.cairo(
+                //               fontSize: 20, color: Colors.redAccent))
+                //     ],
+                //   ),
+                //   decoration: BoxDecoration(
+                //       color: Colors.red[100],
+                //       borderRadius: BorderRadius.circular(20)),
+                // )
               ],
             ),
           )

@@ -58,60 +58,10 @@ class _AudioState extends State<Audio> {
 
   List listMusc = [
     {
-      'title': "ememai sida darck",
-      'singer': 'karar',
-      'url':
-          "https://assets.mixkit.co/music/preview/mixkit-tech-house-vibes-130.mp3",
-      'coverurl':
-          "https://upload.wikimedia.org//wikipedia/en/thumb/8/80/Eminem_-_Music_to_Be_Murdered_By.png/220px-Eminem_-_Music_to_Be_Murdered_By.png",
-    },
-    {
-      'title': "ememai 2",
-      'singer': 'karar',
-      'url':
-          "https://assets.mixkit.co/music/preview/mixkit-tech-house-vibes-130.mp3",
-      'coverurl':
-          "https://upload.wikimedia.org//wikipedia/en/thumb/8/80/Eminem_-_Music_to_Be_Murdered_By.png/220px-Eminem_-_Music_to_Be_Murdered_By.png",
-    },
-    {
-      'title': "ememai 2",
-      'singer': 'karar',
-      'url':
-          "https://assets.mixkit.co/music/preview/mixkit-tech-house-vibes-130.mp3",
-      'coverurl':
-          "https://upload.wikimedia.org//wikipedia/en/thumb/8/80/Eminem_-_Music_to_Be_Murdered_By.png/220px-Eminem_-_Music_to_Be_Murdered_By.png",
-    },
-    {
-      'title': "ememai 2",
-      'singer': 'karar',
-      'url':
-          "https://assets.mixkit.co/music/preview/mixkit-tech-house-vibes-130.mp3",
-      'coverurl':
-          "https://upload.wikimedia.org//wikipedia/en/thumb/8/80/Eminem_-_Music_to_Be_Murdered_By.png/220px-Eminem_-_Music_to_Be_Murdered_By.png",
-    },
-    {
-      'title': "ememai 2",
-      'singer': 'karar',
-      'url':
-          "https://assets.mixkit.co/music/preview/mixkit-tech-house-vibes-130.mp3",
-      'coverurl':
-          "https://upload.wikimedia.org//wikipedia/en/thumb/8/80/Eminem_-_Music_to_Be_Murdered_By.png/220px-Eminem_-_Music_to_Be_Murdered_By.png",
-    },
-    {
-      'title': "ememai 2",
-      'singer': 'karar',
-      'url':
-          "https://assets.mixkit.co/music/preview/mixkit-tech-house-vibes-130.mp3",
-      'coverurl':
-          "https://upload.wikimedia.org//wikipedia/en/thumb/8/80/Eminem_-_Music_to_Be_Murdered_By.png/220px-Eminem_-_Music_to_Be_Murdered_By.png",
-    },
-    {
-      'title': "ememai 2",
-      'singer': 'karar',
-      'url':
-          "https://assets.mixkit.co/music/preview/mixkit-tech-house-vibes-130.mp3",
-      'coverurl':
-          "https://upload.wikimedia.org//wikipedia/en/thumb/8/80/Eminem_-_Music_to_Be_Murdered_By.png/220px-Eminem_-_Music_to_Be_Murdered_By.png",
+      'title': "Abyss",
+      'singer': 'Jin',
+      'url': "https://assets.mixkit.co/music/preview/mixkit-tech-house-vibes-130.mp3",
+      'coverurl':"https://i1.sndcdn.com/artworks-9aYnjcomZDYnFNKV-ui25lA-t500x500.jpg",
     },
   ];
   @override
