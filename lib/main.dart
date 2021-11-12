@@ -1,8 +1,11 @@
+import 'dart:convert';
+
 import 'package:btsworld/audio/audios.dart';
 import 'package:btsworld/curriculumvitae/curriculumvitae.dart';
 import 'package:btsworld/image/images.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:http/http.dart' as http;
 
 void main() {
   runApp(const MaterialApp(home: Home()));
@@ -15,6 +18,20 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  testdata() async {
+    var response =
+        await http.get(Uri.parse('https://sdkararjat68.000webhostapp.com'));
+    var data  = response.body;
+     print(data);
+
+  }
+
+  @override
+  void initState() {
+    testdata();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -69,7 +86,7 @@ class _HomeState extends State<Home> {
                           size: 50,
                           color: Colors.amberAccent,
                         ),
-                        Text( 'اغاني اونلاين',
+                        Text('اغاني اونلاين',
                             style: GoogleFonts.cairo(
                                 fontSize: 20, color: Colors.amber))
                       ],
