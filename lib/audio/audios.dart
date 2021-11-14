@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:audioplayers/audioplayers.dart';
 import 'package:btsworld/audio/custom.list_title.dart';
 import 'package:flutter/material.dart';
@@ -56,12 +58,31 @@ class _AudioState extends State<Audio> {
     this.audioPlayer.seek(duration);
   }
 
+
+
+ // Future<List> testdata() async {
+ //  var response =
+ //  await http.get(Uri.parse('https://sdkararjat68.000webhostapp.com'));
+ //  return jsonDecode( response.body);
+ //  }
+ //
+ //  @override
+ //  void initState() {
+ //  testdata();
+ //  super.initState();
+ //  }
   List listMusc = [
     {
       'title': "Abyss",
       'singer': 'Jin',
-      'url': "https://assets.mixkit.co/music/preview/mixkit-tech-house-vibes-130.mp3",
+      'url': "https://www.mboxdrive.com/sq.mp3",
       'coverurl':"https://i1.sndcdn.com/artworks-9aYnjcomZDYnFNKV-ui25lA-t500x500.jpg",
+    },
+    {
+      'title': "Adrift",
+      'singer': 'RM',
+      'url': "https://www.mboxdrive.com/adrift-rm.mp3",
+      'coverurl':"https://i1.sndcdn.com/artworks-nmDgbCRpwBz2fLai-4PFQyQ-t500x500.jpg",
     },
   ];
   @override
@@ -180,7 +201,7 @@ class _AudioState extends State<Audio> {
                         children: [
                           IconButton(
                               onPressed: () {
-                                audioPlayer.setPlaybackRate(.5);
+                                audioPlayer.onSeekComplete();
                               },
                               icon: const Icon(Icons.arrow_back)),
                           IconButton(

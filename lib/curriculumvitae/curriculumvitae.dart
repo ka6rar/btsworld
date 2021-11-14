@@ -151,7 +151,7 @@ class DataInfoPreson extends StatelessWidget {
       padding: const EdgeInsets.all(10),
       child: Container(
         decoration: BoxDecoration(
-            color: Color(0xff0e1c16), borderRadius: BorderRadius.circular(13)),
+            color: Color(0xff0e1c26), borderRadius: BorderRadius.circular(13)),
         height: 125,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

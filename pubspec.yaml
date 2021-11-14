@@ -72,6 +72,7 @@ flutter:
     - img/kVuRHcR.jpg
     - img/geme.jpg
     - img/jin-bts-you.jpg
+    - img/loding.jpg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -86,10 +87,9 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: Gafata
+    - family: Cairo
       fonts:
         - asset: fonts/Cairo-Light.ttf
-        - asset: fonts/Gafata-Regular.ttf
 
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

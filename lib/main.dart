@@ -1,11 +1,13 @@
-import 'dart:convert';
+import 'dart:ui';
 
 import 'package:btsworld/audio/audios.dart';
 import 'package:btsworld/curriculumvitae/curriculumvitae.dart';
 import 'package:btsworld/image/images.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:http/http.dart' as http;
 
 void main() {
   runApp(const MaterialApp(home: Home()));
@@ -18,19 +20,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  testdata() async {
-    var response =
-        await http.get(Uri.parse('https://sdkararjat68.000webhostapp.com'));
-    var data  = response.body;
-     print(data);
 
-  }
-
-  @override
-  void initState() {
-    testdata();
-    super.initState();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -42,37 +32,22 @@ class _HomeState extends State<Home> {
         backgroundColor: const Color(0xff0e1c36),
         elevation: 0,
       ),
-      body: Stack(
+      body:Stack(
+        textDirection: TextDirection.rtl,
         children: [
-          Container(
-            height: 100,
-            decoration: const BoxDecoration(
-              borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(15),
-                  bottomRight: Radius.circular(15)),
-              color: Color(0xff0e1c36),
-            ),
-            child: const Text(
-              'swdoidihei9ohdioehoidfeohifdhioeihodeoidoih',
-              style: TextStyle(color: Colors.white),
-            ),
-          ),
-          SizedBox(
-            height: 20,
-          ),
           Padding(
-            padding: const EdgeInsets.only(top: 90),
+            padding: const EdgeInsets.only(top: 10),
             child: GridView.count(
               primary: true,
               padding: const EdgeInsets.all(20),
-              crossAxisSpacing: 10,
+              crossAxisSpacing: 40,
               mainAxisSpacing: 10,
-              crossAxisCount: 2,
+              crossAxisCount: 3,
               children: [
                 GestureDetector(
                   onTap: () {
                     Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => Audio(),
+                      builder: (context) => const  Audio(),
                     ));
                   },
                   child: Container(
@@ -86,9 +61,7 @@ class _HomeState extends State<Home> {
                           size: 50,
                           color: Colors.amberAccent,
                         ),
-                        Text('اغاني اونلاين',
-                            style: GoogleFonts.cairo(
-                                fontSize: 20, color: Colors.amber))
+
                       ],
                     ),
                     decoration: BoxDecoration(
@@ -96,33 +69,31 @@ class _HomeState extends State<Home> {
                         borderRadius: BorderRadius.circular(20)),
                   ),
                 ),
-                // GestureDetector(
-                //   onTap: () {
-                //     Navigator.of(context).push(MaterialPageRoute(
-                //       builder: (context) => const Images(),
-                //     ));
-                //   },
-                //   child: Container(
-                //     padding: const EdgeInsets.all(8),
-                //     child: Column(
-                //       mainAxisAlignment: MainAxisAlignment.center,
-                //       crossAxisAlignment: CrossAxisAlignment.center,
-                //       children: [
-                //         const Icon(
-                //           Icons.image_outlined,
-                //           size: 50,
-                //           color: Colors.green,
-                //         ),
-                //         Text('صور',
-                //             style: GoogleFonts.cairo(
-                //                 fontSize: 20, color: Colors.green))
-                //       ],
-                //     ),
-                //     decoration: BoxDecoration(
-                //         color: Colors.teal[100],
-                //         borderRadius: BorderRadius.circular(20)),
-                //   ),
-                // ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const Images(),
+                    ));
+                  },
+                  child: Container(
+                    padding: const EdgeInsets.all(8),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        const Icon(
+                          Icons.image_outlined,
+                          size: 50,
+                          color: Colors.green,
+                        ),
+
+                      ],
+                    ),
+                    decoration: BoxDecoration(
+                        color: Colors.teal[100],
+                        borderRadius: BorderRadius.circular(20)),
+                  ),
+                ),
                 GestureDetector(
                   onTap: () {
                     Navigator.push(
@@ -138,13 +109,10 @@ class _HomeState extends State<Home> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         const Icon(
-                          Icons.person,
+                          Icons.person_outline,
                           size: 50,
                           color: Colors.blueGrey,
                         ),
-                        Text('السيرة الذاتية',
-                            style: GoogleFonts.cairo(
-                                fontSize: 20, color: Colors.blueGrey))
                       ],
                     ),
                     decoration: BoxDecoration(
@@ -172,9 +140,50 @@ class _HomeState extends State<Home> {
                 //       color: Colors.red[100],
                 //       borderRadius: BorderRadius.circular(20)),
                 // )
+
               ],
             ),
-          )
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 160 , left: 8 , right: 8),
+            child: Container(
+                height:  100,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(12) ,
+                ),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(12),
+                  child: Image.network('https://dl.memuplay.com/new_market/img/com.netmarble.btsw.sc0.2021-03-01-19-39-06.jpg' ,
+                    width: MediaQuery.of(context).size.width,
+                    fit: BoxFit.cover,
+                  ),
+                )
+
+            ),
+          ) ,
+          Padding(
+              padding:  const EdgeInsets.only(top: 300 , left: 8 , right: 8),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children:  [
+                  Text('التطبيق خاص في فرقة BTS' , style: GoogleFonts.cairo(color: Colors.white , fontSize: 15 )  ,
+                    textDirection: TextDirection.rtl,
+                  ) ,
+                  Text('يضم احدث الاغاني بالفرقة ' , style: GoogleFonts.cairo(color: Colors.white , fontSize: 15 ),
+                  ) ,
+                  Text('يضم الصور الخاصة بالفرقة بدقة عالية' , style: GoogleFonts.cairo(color: Colors.white , fontSize: 15 ) ,
+                    textDirection: TextDirection.rtl,
+                  ) ,
+                  Text('يضم السيرة الذاتية الخاصة بالفرقة  ' , style: GoogleFonts.cairo(color: Colors.white , fontSize: 15 ) ,
+                    textDirection: TextDirection.rtl,
+                  ) ,
+                  
+                ],
+              )  ,
+
+          ) ,
+
         ],
       ),
     );

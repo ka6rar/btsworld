@@ -2,7 +2,7 @@
     package="com.kararjbr.btsworld.btsworld">
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-   <application
+    <application
         android:usesCleartextTraffic="true"
         android:label="btsworld"
         android:icon="@mipmap/ic_launcher">
@@ -32,6 +32,8 @@
               android:name="io.flutter.embedding.android.SplashScreenDrawable"
               android:resource="@drawable/launch_background"
               />
+
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -42,5 +44,9 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+
+
     </application>
+
+
 </manifest>
