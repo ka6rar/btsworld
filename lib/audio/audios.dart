@@ -201,7 +201,7 @@ class _AudioState extends State<Audio> {
                         children: [
                           IconButton(
                               onPressed: () {
-                                audioPlayer.onSeekComplete();
+                                audioPlayer.setPlaybackRate(.5);
                               },
                               icon: const Icon(Icons.arrow_back)),
                           IconButton(
